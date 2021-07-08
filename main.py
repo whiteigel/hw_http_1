@@ -10,7 +10,6 @@ class Superhero:
         response = requests.get(url=url)
         if response.status_code != 200:
             print("ERROR")
-            return
         intel = response.json()['results'][0]['powerstats']['intelligence']
         name = response.json()['results'][0]['name']
         stats = {}
